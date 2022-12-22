@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href=".//bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./font/all.min.css">
+    <link rel="stylesheet" href="./font/fontawesome.min.css">
+    <title>Document</title>
+</head>
+<body onload="cardshow()">
+
+
+   
+
+
+    <div class="container">
+        <div class="row pt-2 pb-1 h-100  ">
+
+       
+        <div class="col-12 d-flex align-items-center justify-content-center bg-transparent">
+         <form class="form bg-white shadow-lg rounded p-5">
+           <div class="form-group">
+            <h3 class="text-center text-primary">Login</h3>
+            <label class="form-label b-5">User Name</label><br>
+            <input type="text" class="form-control" placeholder="Enter name">
+           </div> <br>
+           <div class="form-group"><label class="form-label b-5">Password</label><br>
+            <input type="password" class="form-control" placeholder="Enter password" id="pass">
+            </div>
+            <br>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check" onClick="clicked()">
+                <label class="form-check-label">Show password</label>
+                <a class="link-danger text-decoration-none p-4" href="#">Forget password?</a>
+            </div>
+            <div class="btn d-flex align-item-center justify-content-center">
+                <button type="submit" class="btn btn-success m-1 ">Submit</button>
+                <button type="reset" class="btn btn-danger m-1">Clear</button>
+                
+
+            </div>
+              <p class="text-secondary">Don't have an account? <a class="link-primary text-decoration-none" href="#">signup now</a></p>
+
+
+         </form>
+
+
+        </div>
+
+
+        </div>
+      
+
+    </div>
+
+    <div class="card" id="card-hide">
+        <div class="card-header text-right">
+            <i  onclick="none()" class="fa-solid fa-phone m-10 text-center"></i>
+        </div>
+        <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laboriosam magni reiciendis autem. Sint voluptates iste laudantium commodi labore, blanditiis distinctio libero placeat ipsam provident sunt nihil, quas architecto aliquid veritatis amet inventore et incidunt fuga laboriosam eveniet iusto a cupiditate accusamus? Deleniti asperiores, animi sit ducimus maxime voluptas. Perferendis ea illum veritatis explicabo repellendus nisi error ad sapiente!
+        </div>
+        <div class="card-footer">
+            copy right for this page
+        </div>
+    </div>
+
+    
+<script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function clicked(){
+            var pass=document.getElementById("pass");
+            if(pass.type==='password'){
+
+                 pass.type="text"
+            }
+            else{
+                pass.type="password"
+            }
+        }
+       function cardshow(){
+         var card=document.getElementById("card-hide")
+         card.style.display="block"
+
+       }
+     none=()=>{
+        var card1=document.getElementById("card-hide")
+        card1.style.display="none";
+     }
+
+    </script>
+    
+</body>
+</html>
